@@ -6,7 +6,8 @@ services:
     ports:
       - 7687:7687
       - 7444:7444
-    entrypoint: ["/usr/lib/memgraph/memgraph", "--log-level=TRACE"]
+    command:
+      - --log-level=TRACE
   lab:
     image: memgraph/lab
     ports:
